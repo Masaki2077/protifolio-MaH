@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de contato completo — Portfólio Matheus Henrique Anjos.">
+  <meta name="keywords" content="formulário, contato, HTML5, inputs, validação">
+  <meta name="author" content="Matheus Henrique Anjos">
+  <meta property="og:title" content="Formulário — Matheus Henrique Anjos">
+  <meta property="og:description" content="Formulário HTML5 com todos os tipos de input e validação JavaScript.">
+  <meta property="og:type" content="website">
+  <title>Formulário — Matheus Henrique Anjos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header>
+    <nav aria-label="Navegação principal">
+      <a href="index.html" class="nav-brand">M<span>H</span>A</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+      </ul>
+      <div style="display:flex;gap:.75rem;align-items:center">
+        <button class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="section">
+      <div class="section-header">
+        <p class="section-tag">Entre em contato</p>
+        <h1 class="section-title">Formulário HTML5 Completo</h1>
+        <p style="color:var(--clr-muted);margin-top:.75rem">Demonstração de todos os tipos de input disponíveis no HTML5 com validação programática em JavaScript.</p>
+      </div>
+
+      <div class="form-wrapper">
+        <!-- novalidate: desativa validação nativa; toda validação é feita via JS -->
+        <form id="form-portfolio" novalidate aria-label="Formulário de cadastro completo">
+          <input type="hidden" name="origem" value="portfolio-matheus-henrique">
+
+          <!-- ── FIELDSET 1: DADOS PESSOAIS ─────────────── -->
+          <fieldset>
+            <legend>👤 Dados Pessoais</legend>
+
+            <div class="form-group">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+                     required minlength="3" maxlength="80"
+                     autocomplete="name" aria-required="true"
+                     aria-describedby="nome-error">
+              <span class="error-msg" id="nome-error" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com"
+                       required autocomplete="email" aria-required="true"
+                       aria-describedby="email-error">
+                <span class="error-msg" id="email-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="tel">Telefone *</label>
+                <input type="tel" id="tel" name="tel" placeholder="(64) 99999-0000"
+                       required pattern="\(\d{2}\)\s9\d{4}-\d{4}"
+                       autocomplete="tel" aria-required="true"
+                       aria-describedby="tel-error">
+                <span class="error-msg" id="tel-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="data-nasc">Data de nascimento *</label>
+                <input type="date" id="data-nasc" name="data-nasc"
+                       required min="1900-01-01"
+                       autocomplete="bday" aria-required="true"
+                       aria-describedby="data-nasc-error">
+                <span class="error-msg" id="data-nasc-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="idade">Idade aproximada</label>
+                <input type="number" id="idade" name="idade"
+                       min="16" max="120" step="1" placeholder="Ex: 20"
+                       aria-describedby="idade-error">
+                <span class="error-msg" id="idade-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="website">Website / LinkedIn</label>
+              <input type="url" id="website" name="website"
+                     placeholder="https://linkedin.com/in/seu-perfil"
+                     autocomplete="url">
+            </div>
+          </fieldset>
+
+          <!-- ── FIELDSET 2: ACESSO ─────────────────────── -->
+          <fieldset>
+            <legend>🔐 Acesso</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha"
+                       required minlength="8"
+                       autocomplete="new-password" aria-required="true"
+                       aria-describedby="senha-error"
+                       placeholder="Mínimo 8 caracteres">
+                <span class="error-msg" id="senha-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="senha-conf">Confirmar senha *</label>
+                <input type="password" id="senha-conf" name="senha-conf"
+                       required minlength="8"
+                       autocomplete="new-password" aria-required="true"
+                       aria-describedby="senha-conf-error"
+                       placeholder="Repita a senha">
+                <span class="error-msg" id="senha-conf-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="busca">Buscar tecnologia</label>
+              <input type="search" id="busca" name="busca"
+                     list="tech-list" placeholder="Digite uma tecnologia...">
+              <datalist id="tech-list">
+                <option value="HTML5">
+                <option value="CSS3">
+                <option value="JavaScript">
+                <option value="TypeScript">
+                <option value="React">
+                <option value="Vue.js">
+                <option value="Node.js">
+                <option value="Python">
+              </datalist>
+            </div>
+          </fieldset>
+
+          <!-- ── FIELDSET 3: PREFERÊNCIAS ──────────────── -->
+          <fieldset>
+            <legend>🎨 Preferências</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cor-favorita">Cor favorita</label>
+                <input type="color" id="cor-favorita" name="cor-favorita"
+                       value="#6c63ff" style="height:46px;padding:.3rem">
+              </div>
+              <div class="form-group">
+                <label for="foto">Foto de perfil</label>
+                <input type="file" id="foto" name="foto"
+                       accept="image/jpeg,image/png,image/webp,image/gif">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="mes-inicio">Mês de início</label>
+                <input type="month" id="mes-inicio" name="mes-inicio">
+              </div>
+              <div class="form-group">
+                <label for="semana">Semana preferida</label>
+                <input type="week" id="semana" name="semana">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="evento">Data e hora do evento</label>
+                <input type="datetime-local" id="evento" name="evento">
+              </div>
+              <div class="form-group">
+                <label for="horario">Horário preferido</label>
+                <input type="time" id="horario" name="horario">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="experiencia-range">Nível de experiência front-end: <output id="range-out">5</output>/10</label>
+              <div class="range-wrapper">
+                <input type="range" id="experiencia-range" name="experiencia-range"
+                       min="1" max="10" step="1" value="5"
+                       oninput="document.getElementById('range-out').value=this.value"
+                       aria-label="Nível de experiência de 1 a 10">
+                <output id="range-out2" style="display:none"></output>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ── FIELDSET 4: ADICIONAIS ─────────────────── -->
+          <fieldset>
+            <legend>📝 Adicionais</legend>
+
+            <div class="form-group">
+              <label for="area">Área de interesse *</label>
+              <select id="area" name="area" required>
+                <option value="">Selecione uma área...</option>
+                <optgroup label="Desenvolvimento">
+                  <option value="front-end">Front-End</option>
+                  <option value="back-end">Back-End</option>
+                  <option value="fullstack">Full-Stack</option>
+                </optgroup>
+                <optgroup label="Outros">
+                  <option value="mobile">Mobile</option>
+                  <option value="dados">Dados & BI</option>
+                  <option value="seguranca">Segurança da Informação</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Sobre você *</label>
+              <textarea id="bio" name="bio"
+                        required minlength="20" maxlength="600"
+                        placeholder="Conte um pouco sobre você, seus objetivos e experiências (mínimo 20 caracteres)..."
+                        aria-required="true" aria-describedby="bio-error"></textarea>
+              <span class="error-msg" id="bio-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Nível de experiência *</label>
+              <div class="checkbox-group" role="radiogroup" aria-required="true">
+                <label class="checkbox-label">
+                  <input type="radio" name="nivel" value="iniciante" required> Iniciante
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="nivel" value="junior"> Júnior
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="nivel" value="pleno"> Pleno
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="nivel" value="senior"> Sênior
+                </label>
+              </div>
+              <span class="error-msg" id="nivel-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Tecnologias que você conhece</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="html"> HTML5</label>
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="css"> CSS3</label>
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="js"> JavaScript</label>
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="git"> Git</label>
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="sql"> SQL</label>
+                <label class="checkbox-label"><input type="checkbox" name="tech" value="python"> Python</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label" style="align-items:flex-start;gap:.75rem;cursor:pointer">
+                <input type="checkbox" id="termos" name="termos" required aria-required="true">
+                <span>Li e aceito os <a href="#" style="color:var(--clr-primary)">termos de uso</a> e a <a href="#" style="color:var(--clr-primary)">política de privacidade</a> *</span>
+              </label>
+              <span class="error-msg" id="termos-error" role="alert"></span>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem">
+            📤 Enviar formulário
+          </button>
+        </form>
+
+        <div class="success-msg" id="success-msg" role="status" aria-live="polite">
+          <p style="font-size:1.5rem">🎉</p>
+          <p><strong>Formulário enviado com sucesso!</strong></p>
+          <p style="font-size:.875rem;margin-top:.5rem;opacity:.8">Obrigado, Matheus! Seus dados foram recebidos.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Matheus Henrique Anjos · ULBRA Itumbiara · <time datetime="2026">2026</time></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

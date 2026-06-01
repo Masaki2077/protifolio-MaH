@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Showcase HTML5 — Todos os recursos em uma única página. Portfólio Matheus Henrique Anjos.">
+  <meta name="keywords" content="showcase, HTML5, CSS3, JavaScript, canvas, SVG, dialog, drag drop, storage">
+  <meta name="author" content="Matheus Henrique Anjos">
+  <meta property="og:title" content="Showcase — Matheus Henrique Anjos">
+  <meta property="og:description" content="Vitrine técnica com todos os recursos HTML5 integrados em uma única página.">
+  <meta property="og:type" content="website">
+  <title>Showcase — Matheus Henrique Anjos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header>
+    <nav aria-label="Navegação principal">
+      <a href="index.html" class="nav-brand">M<span>H</span>A</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+      </ul>
+      <div style="display:flex;gap:.75rem;align-items:center">
+        <button class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="section">
+      <div class="section-header">
+        <p class="section-tag">Portfólio Técnico</p>
+        <h1 class="section-title">Showcase HTML5</h1>
+        <p style="color:var(--clr-muted);margin-top:.75rem">Todos os recursos HTML5 reunidos em uma única página com layout CSS Grid.</p>
+      </div>
+
+      <div class="showcase-grid">
+
+        <!-- ── BLOCO 1: TEXTO SEMÂNTICO ────────────── -->
+        <div class="showcase-block">
+          <h2>📝 Texto Semântico</h2>
+          <p style="font-size:.875rem;color:var(--clr-muted);line-height:1.8">
+            Use <mark>mark</mark> para destacar.
+            Abreviação: <abbr title="HyperText Markup Language">HTML</abbr>.
+            Citação: <cite>MDN Web Docs</cite>.
+            Tecla: <kbd>Ctrl+S</kbd>.
+            Código: <code>const x = 1</code>.
+            <del>Texto removido</del> e <ins>texto inserido</ins>.
+            Fórmula: H<sub>2</sub>O e E=mc<sup>2</sup>.
+            Data: <time datetime="2026-06-02">02/06/2026</time>.
+          </p>
+          <blockquote>
+            "A plataforma web permanece. Dominar o HTML5 nativo é ter a base para qualquer framework."
+            <cite>— Prof. Márcio Carmona</cite>
+          </blockquote>
+        </div>
+
+        <!-- ── BLOCO 2: LISTAS ─────────────────────── -->
+        <div class="showcase-block">
+          <h2>📋 Listas HTML5</h2>
+          <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:.5rem"><strong>Não ordenada:</strong></p>
+          <ul>
+            <li>HTML5 Semântico</li>
+            <li>CSS3 Moderno</li>
+            <li>JavaScript ES6+</li>
+          </ul>
+          <p style="font-size:.8rem;color:var(--clr-muted);margin:.75rem 0 .5rem"><strong>Ordenada:</strong></p>
+          <ol>
+            <li>Estruturar o HTML</li>
+            <li>Estilizar com CSS</li>
+            <li>Adicionar interatividade com JS</li>
+          </ol>
+          <p style="font-size:.8rem;color:var(--clr-muted);margin:.75rem 0 .5rem"><strong>Definição:</strong></p>
+          <dl>
+            <dt>HTML</dt><dd>Linguagem de marcação para estrutura de páginas web.</dd>
+            <dt>CSS</dt><dd>Folhas de estilo em cascata para apresentação.</dd>
+            <dt>JS</dt><dd>Linguagem de programação para interatividade na web.</dd>
+          </dl>
+        </div>
+
+        <!-- ── BLOCO 3: TABELA ─────────────────────── -->
+        <div class="showcase-block">
+          <h2>📊 Tabela HTML5 Completa</h2>
+          <div style="overflow-x:auto">
+            <table>
+              <caption>Tabela 1 — Comparativo de tecnologias Front-End</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Tecnologia</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Nível</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>HTML5</td><td>Marcação</td><td>Avançado</td></tr>
+                <tr><td>CSS3</td><td>Estilo</td><td>Avançado</td></tr>
+                <tr><td>JavaScript</td><td>Programação</td><td>Intermediário</td></tr>
+                <tr><td>Git</td><td>Versionamento</td><td>Intermediário</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="3">Fonte: Avaliação própria — <time datetime="2026">2026</time></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- ── BLOCO 4: MINI FORMULÁRIO ───────────── -->
+        <div class="showcase-block">
+          <h2>📩 Mini Formulário</h2>
+          <form id="mini-form" novalidate aria-label="Mini formulário showcase">
+            <div class="form-group">
+              <label for="mini-nome">Seu nome *</label>
+              <input type="text" id="mini-nome" placeholder="Nome completo" required>
+              <span class="error-msg" id="mini-nome-err" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="mini-range">Satisfação: <output id="mini-range-out">5</output>/10</label>
+              <div class="range-wrapper">
+                <input type="range" id="mini-range" min="1" max="10" step="1" value="5"
+                       oninput="document.getElementById('mini-range-out').value=this.value">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="mini-agree" required>
+                Concordo com o envio
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Enviar</button>
+            <span id="mini-ok" style="display:block;color:var(--clr-accent);margin-top:.5rem;font-size:.8rem" aria-live="polite"></span>
+          </form>
+        </div>
+
+        <!-- ── BLOCO 5: CANVAS LIVRE ───────────────── -->
+        <div class="showcase-block">
+          <h2>🎨 Canvas Livre</h2>
+          <div style="display:flex;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap;align-items:center">
+            <label style="display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--clr-muted)">
+              Cor: <input type="color" id="draw-color" value="#6c63ff" style="height:30px;width:40px;padding:.1rem">
+            </label>
+            <label style="display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--clr-muted)">
+              Espessura:
+              <input type="range" id="draw-size" min="1" max="20" value="4" style="width:80px">
+            </label>
+            <button class="btn btn-outline" id="showcase-btn-limpar" style="padding:.4rem .8rem;font-size:.75rem">🗑 Limpar</button>
+          </div>
+          <canvas id="free-canvas" width="560" height="200"
+                  aria-label="Canvas de desenho livre com mouse"
+                  style="width:100%;border-radius:8px;border:1px solid var(--clr-border);cursor:crosshair;touch-action:none">
+          </canvas>
+          <p style="font-size:.7rem;color:var(--clr-muted);margin-top:.5rem">Clique e arraste para desenhar.</p>
+        </div>
+
+        <!-- ── BLOCO 6: SVG ANIMADO ────────────────── -->
+        <div class="showcase-block">
+          <h2>✨ SVG Animado</h2>
+          <div style="display:flex;justify-content:center;padding:1rem">
+            <svg width="200" height="200" viewBox="0 0 200 200"
+                 role="img" aria-label="Círculo pulsante animado via SVG nativo"
+                 xmlns="http://www.w3.org/2000/svg">
+              <title>Círculo pulsante SVG</title>
+              <!-- Anel externo pulsante -->
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#6c63ff" stroke-width="2" opacity="0.3">
+                <animate attributeName="r" values="60;80;60" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0.05;0.3" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Anel médio -->
+              <circle cx="100" cy="100" r="50" fill="none" stroke="#ff6584" stroke-width="2" opacity="0.5">
+                <animate attributeName="r" values="45;55;45" dur="2.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.5;0.15;0.5" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Círculo central -->
+              <circle cx="100" cy="100" r="30" fill="#6c63ff">
+                <animate attributeName="r" values="28;34;28" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Texto central -->
+              <text x="100" y="106" text-anchor="middle" fill="#fff"
+                    font-family="Space Mono, monospace" font-size="11" font-weight="700">SVG</text>
+            </svg>
+          </div>
+          <p style="font-size:.8rem;color:var(--clr-muted);text-align:center">Animação com &lt;animate&gt; nativo — sem CSS ou JS.</p>
+        </div>
+
+        <!-- ── BLOCO 7: WEB STORAGE AVANÇADO ─────── -->
+        <div class="showcase-block">
+          <h2>💾 Web Storage Avançado</h2>
+          <div class="form-group">
+            <label for="storage-input-sc">localStorage:</label>
+            <input type="text" id="storage-input-sc" placeholder="Valor para localStorage">
+          </div>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem">
+            <button class="btn btn-primary" style="padding:.5rem .9rem;font-size:.8rem"
+              onclick="salvarStorage('storage-input-sc','sc-storage-result');listarStorage()">💾 LS Salvar</button>
+            <button class="btn btn-outline" style="padding:.5rem .9rem;font-size:.8rem"
+              onclick="carregarStorage('storage-input-sc','sc-storage-result')">📂 LS Carregar</button>
+          </div>
+          <div class="form-group">
+            <label for="session-input">sessionStorage:</label>
+            <input type="text" id="session-input" placeholder="Valor para sessionStorage">
+          </div>
+          <button class="btn btn-outline" style="padding:.5rem .9rem;font-size:.8rem;margin-bottom:.75rem"
+            onclick="salvarSession()">💾 SS Salvar</button>
+          <button class="btn btn-outline" style="padding:.5rem .9rem;font-size:.8rem;margin-bottom:.75rem"
+            onclick="listarStorage()">📋 Listar tudo</button>
+          <div class="api-result" id="sc-storage-result" style="min-height:2rem;font-size:.8rem" aria-live="polite"></div>
+          <div id="storage-lista" style="margin-top:.5rem;font-size:.75rem;color:var(--clr-muted)"></div>
+        </div>
+
+        <!-- ── BLOCO 8: GEOLOCALIZAÇÃO ─────────────── -->
+        <div class="showcase-block">
+          <h2>📍 Geolocalização</h2>
+          <p style="font-size:.875rem;color:var(--clr-muted);margin-bottom:1rem">
+            Usa a Geolocation API para exibir a posição atual do usuário com tratamento de erros.
+          </p>
+          <button class="btn btn-primary" onclick="obterLocalizacao('sc-geo-result')">📡 Obter posição</button>
+          <div class="api-result" id="sc-geo-result" style="min-height:2rem;font-size:.8rem;margin-top:.75rem" aria-live="polite" role="status">
+            Aguardando solicitação...
+          </div>
+        </div>
+
+        <!-- ── BLOCO 9: DRAG & DROP ────────────────── -->
+        <div class="showcase-block">
+          <h2>🖱 Drag &amp; Drop</h2>
+          <div class="drag-drop-wrapper">
+            <div>
+              <p style="font-size:.75rem;color:var(--clr-muted);margin-bottom:.5rem">Origem:</p>
+              <div id="drag-sc-source" style="padding:.5rem">
+                <div id="drag-item-sc" class="drag-item" draggable="true" style="font-size:.8rem;padding:.5rem 1rem">
+                  🧩 Arraste-me
+                </div>
+              </div>
+            </div>
+            <div>
+              <p style="font-size:.75rem;color:var(--clr-muted);margin-bottom:.5rem">Destino:</p>
+              <div class="drop-zone" id="drop-zone-sc" style="min-height:70px;font-size:.8rem" aria-label="Área de soltar elemento">
+                Solte aqui ↓
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── BLOCO 10: CLIPBOARD + DIALOG ──────── -->
+        <div class="showcase-block">
+          <h2>📋 Clipboard + &lt;dialog&gt;</h2>
+          <p style="font-size:.875rem;color:var(--clr-muted);margin-bottom:1rem">Copie texto e abra um modal nativo HTML5.</p>
+
+          <code id="copy-sc-text" style="display:block;padding:.75rem;border-radius:8px;font-size:.8rem;margin-bottom:1rem">
+            github.com/matheus-henrique-anjos
+          </code>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <button class="btn btn-primary" style="font-size:.8rem;padding:.6rem 1rem"
+              onclick="copiarTexto('copy-sc-text','copy-sc-confirm')">📋 Copiar</button>
+            <button class="btn btn-outline" style="font-size:.8rem;padding:.6rem 1rem"
+              onclick="document.getElementById('meu-dialog').showModal()">🗂 Abrir modal</button>
+          </div>
+          <span id="copy-sc-confirm" style="display:block;margin-top:.5rem;color:var(--clr-accent);font-size:.8rem" aria-live="polite"></span>
+
+          <!-- DIALOG NATIVO HTML5 -->
+          <dialog id="meu-dialog" aria-labelledby="dialog-titulo" aria-describedby="dialog-desc">
+            <h3 id="dialog-titulo">🚀 Sobre este portfólio</h3>
+            <p id="dialog-desc" style="color:var(--clr-muted);font-size:.875rem;margin:1rem 0">
+              Este mini-site foi desenvolvido por <strong>Matheus Henrique Anjos</strong> como trabalho prático da disciplina de Desenvolvimento Front-End (ULBRA Itumbiara, 2026).<br><br>
+              Tecnologias utilizadas: <strong>HTML5 puro · CSS3 · JavaScript ES6+</strong> — sem frameworks ou bibliotecas externas.
+            </p>
+            <div style="display:flex;justify-content:flex-end;gap:.75rem">
+              <button class="btn btn-outline" onclick="document.getElementById('meu-dialog').close()" style="padding:.5rem 1rem">Fechar</button>
+              <a href="index.html" class="btn btn-primary" style="padding:.5rem 1rem">Ver portfólio</a>
+            </div>
+          </dialog>
+        </div>
+
+      </div><!-- /showcase-grid -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Matheus Henrique Anjos · ULBRA Itumbiara · <time datetime="2026">2026</time></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

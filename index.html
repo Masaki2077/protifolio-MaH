@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Matheus Henrique Anjos — Desenvolvedor Front-End, estudante de Sistemas de Informação na ULBRA Itumbiara.">
+  <meta name="keywords" content="portfólio, front-end, HTML5, CSS3, JavaScript, Matheus Henrique Anjos, desenvolvimento web">
+  <meta name="author" content="Matheus Henrique Anjos">
+  <meta property="og:title" content="Matheus Henrique Anjos — Portfólio Front-End">
+  <meta property="og:description" content="Mini-site portfólio profissional com HTML5, CSS3 e JavaScript ES6+ puro.">
+  <meta property="og:type" content="website">
+  <title>Matheus Henrique Anjos — Portfólio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header>
+    <nav aria-label="Navegação principal">
+      <a href="index.html" class="nav-brand">M<span>H</span>A</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+      </ul>
+      <div style="display:flex;gap:.75rem;align-items:center">
+        <button class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero-content">
+        <div class="hero-badge">🚀 Disponível para projetos</div>
+        <h1 id="hero-titulo">
+          Matheus<br>
+          <span class="accent">Henrique</span><br>
+          <span class="accent2">Anjos</span>
+        </h1>
+        <p>Desenvolvedor Front-End em formação · Estudante de Sistemas de Informação na ULBRA Itumbiara. Apaixonado por criar experiências web modernas com HTML5, CSS3 e JavaScript puro.</p>
+        <div class="hero-actions">
+          <a href="formulario.html" class="btn btn-primary">📬 Entre em contato</a>
+          <a href="galeria.html" class="btn btn-outline">🎨 Ver projetos</a>
+        </div>
+        <label for="progress-habilidades" style="margin-top:1.5rem;display:block;font-size:.75rem;color:var(--clr-muted)">Progresso do portfólio</label>
+        <progress id="progress-habilidades" max="100" value="0" data-value="78" aria-label="78% do portfólio concluído"></progress>
+        <small style="color:var(--clr-muted);font-size:.7rem">78% concluído</small>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-avatar" role="img" aria-label="Inicial do nome Matheus">M</div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sobre-titulo">
+      <div class="section-header">
+        <p class="section-tag">Quem sou</p>
+        <h2 class="section-title" id="sobre-titulo">Sobre mim</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:2.5rem;align-items:start">
+        <div>
+          <article>
+            <p style="color:var(--clr-muted);margin-bottom:1rem">Olá! Sou <strong style="color:var(--clr-text)">Matheus Henrique Anjos</strong>, estudante do 3º período de Sistemas de Informação. Tenho focado meus estudos na construção de interfaces web semânticas, acessíveis e performáticas utilizando somente os recursos nativos da plataforma web.</p>
+            <p style="color:var(--clr-muted);margin-bottom:2rem">Minha stack atual inclui HTML5 semântico, CSS moderno (Grid, Flexbox, variáveis, animações) e JavaScript ES6+ para lógica de validação, Canvas, APIs nativas como Geolocation e Web Storage.</p>
+          </article>
+
+          <details>
+            <summary>🎓 Formação Acadêmica</summary>
+            <div class="details-body">
+              <p>Bacharelado em <strong>Sistemas de Informação</strong> — ULBRA Instituto Luterano de Ensino Superior de Itumbiara. <time datetime="2024">2024</time>–<time datetime="2028">2028</time> (previsto).</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>💻 Habilidades Técnicas</summary>
+            <div class="details-body">
+              <p>HTML5 · CSS3 · JavaScript ES6+ · Git · VS Code · Figma (básico) · Lógica de Programação · Banco de Dados (em estudo).</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>🏆 Objetivos</summary>
+            <div class="details-body">
+              <p>Aprofundar conhecimentos em front-end nativo antes de migrar para frameworks como React e Vue. Contribuir com projetos open-source e desenvolver aplicações acessíveis e performáticas.</p>
+            </div>
+          </details>
+        </div>
+
+        <aside aria-label="Métricas de habilidades">
+          <div class="sidebar-metrics">
+            <h3>⚡ Skills</h3>
+            <div class="metric-item">
+              <div class="metric-label"><span>HTML5</span><strong>92%</strong></div>
+              <meter min="0" max="100" low="40" high="70" optimum="90" value="92" aria-label="HTML5: 92%"></meter>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label"><span>CSS3</span><strong>85%</strong></div>
+              <meter min="0" max="100" low="40" high="70" optimum="90" value="85" aria-label="CSS3: 85%"></meter>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label"><span>JavaScript</span><strong>72%</strong></div>
+              <meter min="0" max="100" low="40" high="70" optimum="90" value="72" aria-label="JavaScript: 72%"></meter>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="paginas-titulo" style="padding-top:0">
+      <div class="section-header">
+        <p class="section-tag">Navegue</p>
+        <h2 class="section-title" id="paginas-titulo">Seções do portfólio</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">📋</div>
+          <h3>Formulário de Contato</h3>
+          <p>Formulário completo com 18 tipos de input HTML5, fieldsets semânticos e validação programática em JavaScript.</p>
+          <a href="formulario.html" class="btn btn-primary" style="margin-top:1.5rem">Acessar →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎨</div>
+          <h3>Galeria Interativa</h3>
+          <p>Demonstração de multimídia (vídeo, áudio, imagem responsiva), Canvas 2D, SVG inline e APIs web nativas.</p>
+          <a href="galeria.html" class="btn btn-primary" style="margin-top:1.5rem">Acessar →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Showcase HTML5</h3>
+          <p>Vitrine técnica com todos os recursos reunidos: canvas livre, SVG animado, dialog nativo e Web Storage avançado.</p>
+          <a href="showcase.html" class="btn btn-primary" style="margin-top:1.5rem">Acessar →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">📄</div>
+          <h3>Pré-trabalho</h3>
+          <p>Acesse o pré-trabalho base desta disciplina, que serviu de fundação para este mini-site.</p>
+          <a href="https://masaki2077.github.io/DevSpace/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:1.5rem">Ver →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projetos-titulo" style="padding-top:0">
+      <div class="section-header">
+        <p class="section-tag">Portfólio</p>
+        <h2 class="section-title" id="projetos-titulo">Projetos em destaque</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">🌐</div>
+          <h3>Mini-Site HTML5</h3>
+          <p>Este próprio projeto: mini-site semântico, responsivo e interativo utilizando HTML5, CSS3 e JavaScript ES6+ puro.</p>
+          <a href="showcase.html" class="btn btn-primary" style="margin-top:1.5rem">Ver Detalhes →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎮</div>
+          <h3>Canvas Game</h3>
+          <p>Jogo 2D simples desenvolvido com a API Canvas do HTML5, explorando animações e detecção de colisão em JS.</p>
+          <a href="galeria.html" class="btn btn-primary" style="margin-top:1.5rem">Ver na Galeria →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Dashboard SVG</h3>
+          <p>Dashboard de dados simulados com gráficos SVG inline, sem dependência de bibliotecas externas.</p>
+          <a href="galeria.html" class="btn btn-primary" style="margin-top:1.5rem">Ver Gráficos →</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Desenvolvido por <strong>Matheus Henrique Anjos</strong> —
+      Disciplina de Desenvolvimento Front-End · ULBRA Itumbiara ·
+      <time datetime="2026">2026</time>
+    </p>
+    <p>
+      <a href="mailto:m.anjos9080@gmail.com">m.anjos9080@gmail.com</a> </p>
+    <p style="margin-top:.5rem">
+      Prof. Márcio Carmona Costa
+   |</p>
+    
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
